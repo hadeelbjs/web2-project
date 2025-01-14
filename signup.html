@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign up</h1>
+        <div class="role-selection">
+            <label>
+                <input type="radio" name="role" value="patient" checked /> Patient
+            </label>
+            <label>
+                <input type="radio" name="role" value="doctor" /> Doctor
+            </label>
+        </div>
+        <form action="submit.html" method="POST">
+            <label>First Name: <input type="text" name="first_name" required /></label>
+            <label>Last Name: <input type="text" name="last_name" required /></label>
+            <label>ID: <input type="text" name="id" required /></label>
+            <label>DoB: <input type="date" name="dob" required /></label>
+            <label>Email: <input type="email" name="email" required /></label>
+            <label>Password: <input type="password" name="password" required /></label>
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+</body>
+</html>
