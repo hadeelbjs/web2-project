@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>سكون</title>
+        <link rel="stylesheet" href="style.css">    
+    </head>
+    <body>
+
+       <h1>Patient's Medications</h1>
+       <main>
+        <form method="GET" action=''>
+            <label>Patirnt's Name:<input type="text" id="Pname" name="Pname"></label><br>
+            <label>Age:<input type="number" id="PAge" name="PAge"></label>
+            <p>Gender</p>
+            <ul>
+                <li><input type="radio" name="PGender" value="Female">Female</li>
+                <li><input type="radio" name="PGender" value="Male">Male</li>
+            </ul>
+
+            <p>Medications:</p>
+            <ul>
+                <li><input type="checkbox" name="Medications" value="Aspirin">Aspirin</li>
+                <li><input type="checkbox" name="Medications" value="Zoloft">Zoloft</li>
+                <li><input type="checkbox" name="Medications" value="Cymbalta">Cymbalta</li>
+                <li><input type="checkbox" name="Medications" value="Parnate">Parnate</li>
+
+            </ul>
+
+            <input type="submit">
+        </form>
+       </main>
+    </body>
+</html>
