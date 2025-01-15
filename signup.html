@@ -7,25 +7,55 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Sign up</h1>
-        <div class="role-selection">
+
+    <main>
+        <h2>Sign-Up</h2>
+
+        <section>
+            <label for="role">Select your role:</label>
             <label>
-                <input type="radio" name="role" value="patient" checked /> Patient
+                <input type="radio" name="role" value="patient" onchange="showForm()"  /> Patient
             </label>
             <label>
-                <input type="radio" name="role" value="doctor" /> Doctor
+                <input type="radio"  name="role" value="doctor" onchange="showForm()"/> Doctor
             </label>
-        </div>
-        <form action="submit.html" method="POST">
-            <label>First Name: <input type="text" name="first_name" required /></label>
-            <label>Last Name: <input type="text" name="last_name" required /></label>
-            <label>ID: <input type="text" name="id" required /></label>
-            <label>DoB: <input type="date" name="dob" required /></label>
-            <label>Email: <input type="email" name="email" required /></label>
-            <label>Password: <input type="password" name="password" required /></label>
-            <button type="submit">Sign up</button>
-        </form>
-    </div>
+            
+          </section>
+          
+          <!-- Patient Form -->
+          <form id="patientForm" style="display: none;" method="POST">
+            <label>First Name: <input type="text" name="firstName" placeholder="First Name" required></label><br>
+            <label>Last Name: <input type="text" name="lastName" placeholder="Last Name" required></label><br>
+            <label>ID: <input type="text" name="id" placeholder="ID" required></label><br>
+            <label>Gender: <select name="gender" required>
+              <option value="" disabled selected>Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select></label><br>
+            <label>Date Of Birth: <input type="date" name="dob" required></label><br>
+            <label>Email: <input type="email" name="email" placeholder="Email Address" required></label><br>
+            <label>Password: <input type="password" name="password" placeholder="Password" required></label><br>
+            <button type="submit" onclick="redirect('PatientHomePage.html');">Sign Up</button>
+          </form>
+          
+          <!-- Doctor Form -->
+          <form id="doctorForm" style="display: none;" action="doctor_home.html" method="POST">
+            <label>First Name:<input type="text" name="firstName" placeholder="First Name" required></label><br>
+            <label>Last Name:<input type="text" name="lastName" placeholder="Last Name" required></label><br>
+            <label>ID:<input type="text" name="id" placeholder="ID" required></label><br>
+            <label>Photo:<input type="file" name="photo" accept="image/*" required></label><br>
+            <label>Speciality:<select name="speciality" required>
+              <option value="" disabled selected>Speciality</option>
+              <option value="cardiology">Cardiology</option>
+              <option value="neurology">Neurology</option>
+              <option value="pediatrics">Pediatrics</option>
+            </select></label><br>
+            <label>Email: <input type="email" name="email" placeholder="Email Address" required></label><br>
+            <label>Password: <input type="password" name="password" placeholder="Password" required></label><br>
+            <button type="submit" onclick="redirect('doctorHomePage.html');">Sign Up</button>
+          </form>
+    </main>
+    <script src="sign-up.js">window.onload = showForm; </script>
+
 </body>
 </html>
