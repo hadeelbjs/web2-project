@@ -8,24 +8,21 @@
 </head>
 <body>
     <main>
-    <div class="container">
-        <!-- زر الرجوع -->
-        <button class="btn-back" onclick="history.back()">←</button>
+        <div class="container">
         
-        <h1>Log in</h1>
-        <form action="redirect.html" method="POST">
+            <h1>Log in</h1>
+            <form action="redirect.html" method="POST">
                 <label>
                     <input type="radio" name="role" value="patient" required /> Patient
                 </label>
                 <label>
                     <input type="radio" name="role" value="doctor" required /> Doctor
-                </label>
-            </div>
-            <label>Email: <input type="email" name="email" required /></label>
+                </label><br>
+            <label>Email: <input type="email" name="email" required /></label><br>
             <label>Password: <input type="password" name="password" required /></label>
-            <button type="submit">Log in</button>
+            <button type="submit" onclick="redirectFromLogin()">Log in</button>
         </form>
-    </div>
+        </div>
     </main>
 </body>
 </html>
