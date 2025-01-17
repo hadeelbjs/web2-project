@@ -8,47 +8,72 @@
 </head>
 <body>
 
-    <div class="container">
-   <button class="btn-back" onclick="history.back()"> <span>←</span></button>
-        
-        <h1>Sign up</h1>
-        <div class="role-selection">
-            <label>
-                <input type="radio" name="role" value="patient" onchange="showForm()"  /> Patient
-            </label>
-            <label>
-                <input type="radio"  name="role" value="doctor" onchange="showForm()"/> Doctor
-            </label>
-        </div>
-        <form action="submit.html" method="POST">
-            <label>First Name: <input type="text" name="first_name" required /></label>
-            <label>Last Name: <input type="text" name="last_name" required /></label>
-            <label>ID: <input type="text" name="id" required /></label>
-            <label>DoB: <input type="date" name="dob" required /></label>
-            <label>Email: <input type="email" name="email" required /></label>
-            <label>Password: <input type="password" name="password" required /></label>
-            <button class="btn-dark" type="submit">Sign up</button>
-			
-<!-- قسم تسجيل الدخول باستخدام وسائل التواصل الاجتماعي -->
-<div class="social-login">
-    <p>Or sign in with</p>
-    <div class="social-buttons">
-        <button class="social-btn google">
-            <img src="google-icon.png" alt="Google">
-        </button>
-        <button class="social-btn facebook">
-            <img src="facebook-icon.png" alt="Facebook">
-        </button>
-        <button class="social-btn apple">
-            <img src="apple-icon.png" alt="Apple">
-        </button>
-    </div>
-</div>
-
-
-        </form>
+   
+        <main> 
+            
+            <div class="container">
+            <h2>Sign-Up</h2>
+    
+            <section>
+                <label for="role">Select your role:</label>
+                <label>
+                    <input type="radio" name="role" value="patient" onchange="showForm()"  /> Patient
+                </label>
+                <label>
+                    <input type="radio"  name="role" value="doctor" onchange="showForm()"/> Doctor
+                </label>
+                
+            </section>
+              
+            <!-- Patient Form -->
+            <form id="patientForm" style="display: none;" method="POST">
+                <label>First Name: <input type="text" name="firstName" placeholder="First Name" required></label><br>
+                <label>Last Name: <input type="text" name="lastName" placeholder="Last Name" required></label><br>
+                <label>ID: <input type="text" name="id" placeholder="ID" required></label><br>
+                <label>Gender: <select name="gender" required>
+                  <option value="" disabled selected>Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select></label><br>
+                <label>Date Of Birth: <input type="date" name="dob" required></label><br>
+                <label>Email: <input type="email" name="email" placeholder="Email Address" required></label><br>
+                <label>Password: <input type="password" name="password" placeholder="Password" required></label><br>
+                <button type="submit" onclick="redirect('PatientHomePage.html');">Sign Up</button>
+              </form>
+              
+              <!-- Doctor Form -->
+              <form id="doctorForm" style="display: none;" action="" method="POST">
+                <label>First Name:<input type="text" name="firstName" placeholder="First Name" required></label><br>
+                <label>Last Name:<input type="text" name="lastName" placeholder="Last Name" required></label><br>
+                <label>ID:<input type="text" name="id" placeholder="ID" required></label><br>
+                <label>Photo:<input type="file" name="photo" accept="image/*" required></label><br>
+                <label>Speciality:<select name="speciality" required>
+                  <option value="" disabled selected>Speciality</option>
+                  <option value="cardiology">Cardiology</option>
+                  <option value="neurology">Neurology</option>
+                  <option value="pediatrics">Pediatrics</option>
+                </select></label><br>
+                <label>Email: <input type="email" name="email" placeholder="Email Address" required></label><br>
+                <label>Password: <input type="password" name="password" placeholder="Password" required></label><br>
+                <button type="submit" onclick="redirect('doctorHomePage.html');">Sign Up</button>
+              </form>
+                <!-- قسم تسجيل الدخول باستخدام وسائل التواصل الاجتماعي -->
+                <div class="social-login">
+                    <p>Or sign in with</p>
+                    <div class="social-buttons">
+                        <button class="social-btn google">
+                            <img src="google-icon.png" alt="Google">
+                        </button>
+                        <button class="social-btn facebook">
+                            <img src="facebook-icon.png" alt="Facebook">
+                        </button>
+                        <button class="social-btn apple">
+                            <img src="apple-icon.png" alt="Apple">
+                        </button>
+                </div>
+     
     </div>
 	
-
+    <script src="sign-up.js">window.onload = showForm; </script>
 </body>
 </html>
