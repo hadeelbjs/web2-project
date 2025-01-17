@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
+   <button class="btn-back" onclick="history.back()"> <span>←</span></button>
+        
         <h1>Sign up</h1>
         <div class="role-selection">
             <label>
@@ -24,8 +27,28 @@
             <label>DoB: <input type="date" name="dob" required /></label>
             <label>Email: <input type="email" name="email" required /></label>
             <label>Password: <input type="password" name="password" required /></label>
-            <button type="submit">Sign up</button>
+            <button class="btn-dark" type="submit">Sign up</button>
+			
+<!-- قسم تسجيل الدخول باستخدام وسائل التواصل الاجتماعي -->
+<div class="social-login">
+    <p>Or sign in with</p>
+    <div class="social-buttons">
+        <button class="social-btn google">
+            <img src="google-icon.png" alt="Google">
+        </button>
+        <button class="social-btn facebook">
+            <img src="facebook-icon.png" alt="Facebook">
+        </button>
+        <button class="social-btn apple">
+            <img src="apple-icon.png" alt="Apple">
+        </button>
+    </div>
+</div>
+
+
         </form>
     </div>
+	
+
 </body>
 </html>
