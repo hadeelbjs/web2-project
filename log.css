@@ -1,0 +1,145 @@
+body {
+    background-image: url('images/bg1.jpg');
+    backdrop-filter: blur(6px);
+    width: 100vw ;
+    height:100vw;
+    margin: 0;
+    background-size: cover;
+    color: white;
+    overflow-y: hidden; /* Prevent horizontal scrolling */
+
+}
+main {
+    background-color: rgba(57,77,49, 0.7);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 20px;
+    border: 1px solid rgba(57,77,49,0.18);
+    margin-top: 10vw;
+    margin-left: 35vw;
+    height: 32vw;
+    width: 25vw;
+}
+#role-lable {
+    font-size: 1.2vw;
+
+}
+section {
+    margin-bottom: 1vw;
+}
+.container {
+    padding: 4.7vw;
+    padding-top: 0vw;
+    
+}
+#gender{
+    width: 4vw;
+    box-sizing: content-box;
+}
+#dob{
+    width: 10.2vw;
+}
+#spec {
+    box-sizing: content-box;
+}
+#photo{
+    display: none;
+}
+ span {
+    font-size: 1.2vw;
+    margin-right: 0.8vw;
+}
+#input-file{
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    width: 7vw;
+    cursor: pointer;
+    color: rgba(255, 244, 230, 0.699);
+}
+.log-button{
+    text-align: center;
+    display: block;
+    width: 10vw;
+    height: 2.2vw;
+    font-size: large;
+    border-radius: 20px;
+    margin-top: 1vw;
+    margin-left: 3vw;
+    border: 0;
+    font-weight: 300;
+    cursor: pointer;
+    background-color: #cbd4ae6f;
+    color: white;
+}
+.log-button:hover{
+   transform: scale(1.05);
+    background-color: #cbd4aeda;
+    color: white;
+}
+.elemnt {
+    width: 15vw;
+    background-color : rgb(146, 156, 124);
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 0.5vw;
+    height: 1.4vw;
+    border: 0;
+    padding: 5px;
+}
+.cont {
+    font-size: 1.1vw;
+}
+.container h2 {
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 10px;
+}
+.zain-extralight {
+    font-family: "Zain", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .zain-light {
+    font-family: "Zain", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .zain-regular {
+    font-family: "Zain", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .zain-bold {
+    font-family: "Zain", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .zain-extrabold {
+    font-family: "Zain", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .zain-black {
+    font-family: "Zain", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .zain-light-italic {
+    font-family: "Zain", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .zain-regular-italic {
+    font-family: "Zain", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
