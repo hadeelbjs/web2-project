@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log-in - سكون</title>
-    <link rel="stylesheet" href="style.css"> <!-- ملف CSS المشترك -->
+    <title>Log-in</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
+    <main>
     <div class="container">
         <!-- زر الرجوع -->
         <button class="btn-back" onclick="history.back()">←</button>
         
         <h1>Log in</h1>
         <form action="redirect.html" method="POST">
-            <div class="role-selection">
                 <label>
                     <input type="radio" name="role" value="patient" required /> Patient
                 </label>
@@ -21,23 +21,11 @@
                     <input type="radio" name="role" value="doctor" required /> Doctor
                 </label>
             </div>
-           
-            <div class="input-container">
-                <span class="icon">📧</span>
-                <input type="email" name="email" placeholder="Email" required />
-            </div>
-           
-            <div class="input-container">
-                <span class="icon">🔒</span>
-                <input type="password" name="password" placeholder="Password" required />
-                <span class="icon show-password">👁️</span>
-            </div>
-            <div class="forgot-password">
-                <a href="#">Forgot password?</a>
-            </div>
-            
-            <button type="submit" class="btn-dark">Get Started</button>
+            <label>Email: <input type="email" name="email" required /></label>
+            <label>Password: <input type="password" name="password" required /></label>
+            <button type="submit">Log in</button>
         </form>
     </div>
+    </main>
 </body>
 </html>

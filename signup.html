@@ -14,10 +14,10 @@
         <h1>Sign up</h1>
         <div class="role-selection">
             <label>
-                <input type="radio" name="role" value="patient" checked /> Patient
+                <input type="radio" name="role" value="patient" onchange="showForm()"  /> Patient
             </label>
             <label>
-                <input type="radio" name="role" value="doctor" /> Doctor
+                <input type="radio"  name="role" value="doctor" onchange="showForm()"/> Doctor
             </label>
         </div>
         <form action="submit.html" method="POST">

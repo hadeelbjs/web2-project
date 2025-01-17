@@ -1,10 +1,27 @@
-function showForm(role) {
-    document.getElementById('patient-form').classList.add('hidden');
-    document.getElementById('doctor-form').classList.add('hidden');
+function showForm() {
+    //const role = document.getElementById('role').value;
+    const role = document.querySelector('input[name="role"][type="radio"]:checked').value;
+    const patientForm = document.getElementById('patientForm');
+    const doctorForm = document.getElementById('doctorForm');
     
     if (role === 'patient') {
-        document.getElementById('patient-form').classList.remove('hidden');
+      patientForm.style.display = 'block';
+      doctorForm.style.display = 'none';
     } else if (role === 'doctor') {
-        document.getElementById('doctor-form').classList.remove('hidden');
+      doctorForm.style.display = 'block';
+      patientForm.style.display = 'none';
     }
-}
+  }
+
+  function redirect(l){
+    window.location.href=l;
+  }
+  function redirectFromLogin(){
+    const role = document.querySelector('input[name="role"][type="radio"]:checked').value;
+    
+    if (role === 'patient') {
+        window.location.href='PatientHomePage.html';
+    } else if (role === 'doctor') {
+        window.location.href='doctorHomePage.html';
+    }
+  }
