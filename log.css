@@ -77,6 +77,12 @@ section {
     background-color: #cbd4aeda;
     color: white;
 }
+#log-in-h2 {
+    margin-bottom: 1.5vw;
+}
+#role-login{
+    margin-bottom: 1vw;
+}
 .elemnt {
     width: 15vw;
     background-color : rgb(146, 156, 124);
@@ -86,6 +92,9 @@ section {
     height: 1.4vw;
     border: 0;
     padding: 5px;
+}
+.components {
+    font-size: 1.3vw;
 }
 .cont {
     font-size: 1.1vw;
