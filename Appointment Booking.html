@@ -4,84 +4,224 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appointment Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f9f9f9;
+            background: url('images/bg1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
         }
+
+        .logo {
+            display: inline;
+            position: absolute;
+            top: 5px;
+            left: 10px;
+        }
+
+        .logo img {
+            height: 90px; 
+        }
+
+        .back-button {
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #cbd4ae6f;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 10px;
+            position: absolute;
+            top: 90px; 
+            left: 20px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .back-button:hover {
+            transform: scale(1.1);
+            background-color: #cbd4aeda;
+        }
+
+        .FormTitle {
+            width: 100%;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 20%;
+            right: -3%;
+        }
+
         h1 {
-            text-align: center;
+            color: rgb(244, 239, 239);
+            font-size: 3.5rem;
+            margin: 0;
+            padding-top: 300px;
+            padding-right: 100px;
+            font-weight: 900;
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: flex-end;
+            min-height: 80vh; 
+            gap: 20px;
+        }
+
+        .form-container {
+            width: 50%; 
+            height:555px ;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: rgb(22, 22, 22);
+        }
+        
+
+        form {
+            width: 80%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        input[type="date"], input[type="time"], select, textarea {
+            border-style: none;
+            background-color: rgba(203, 212, 174, 0.8);
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 16px;
             color: #333;
         }
-        form {
-            max-width: 500px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        textarea {
+            resize: none;
         }
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
-        }
-        select, input, textarea, button {
-            width: 100%;
-            max-width: 480px;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
+
         button {
-            background-color: #4CAF50;
-            color: white;
+            padding: 10px 20px;
             border: none;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
             cursor: pointer;
+            font-size: 16px;
+            width: auto;
+            align-self: flex-start;
         }
+
         button:hover {
-            background-color: #45a049;
+            transform: scale(1.05);
+            background-color: #333;
+        }
+
+        #next {
+            margin-left: 5px;
+            width: 20%;
+        }
+
+        .specialty-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            
+        }
+        #specialty{
+            width: 50%;
+        }
+
+        .date-time-wrapper {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .date-time-wrapper div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex: 1; 
+        }
+        #book{
+            width: 30%;
+            margin-top: 15px;
+            margin-left: 200px;
         }
     </style>
 </head>
 <body>
-    <h1>Appointment Booking</h1>
+    <div class="logo">
+        <img src="images/logohome.png" alt="SukoonLogo">
+    </div>
+    <a href="PatientHomePage.html" class="back-button">←</a>
+    <div class="FormTitle">
+        <h1>Booking<br> An Appointment</h1>  
+    </div>
+    <div class="right-section">
+        <div class="form-container">
+           
+            <form class="specialty-form">
+                <label for="specialty">Select Specialty:</label>
+                <div class="specialty-wrapper">
+                    <select id="specialty" name="specialty" required>
+                        <option value="">Select a specialty</option>
+                        <option value="Cardiology">Cardiology</option>
+                        <option value="Dermatology">Dermatology</option>
+                        <option value="Neurology">Neurology</option>
+                    </select>
+                    <button type="button" id="next">Add</button>
+                </div>
+            </form>
 
-    <!-- First Form -->
-    <form>
-        <label for="specialty">Select Specialty:</label>
-        <select id="specialty" name="specialty" required>
-            <option value="">Select a specialty</option>
-            <option value="Cardiology">Cardiology</option>
-            <option value="Dermatology">Dermatology</option>
-            <option value="Neurology">Neurology</option>
-        </select>
-        <button type="button">Next</button>
-    </form>
 
-    <!-- Second Form -->
-    <form>
-        <label for="doctor">Select Doctor:</label>
-        <select id="doctor" name="doctor" required>
-            <option value="">Select a doctor</option>
-            <option value="Dr. John Doe">Dr. John Doe</option>
-            <option value="Dr. Jane Smith">Dr. Jane Smith</option>
-        </select>
 
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required>
+           
+            <form>
+                <div class="date-time-wrapper">
+                    <div>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div>
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
 
-        <label for="time">Time:</label>
-        <input type="time" id="time" name="time" required>
+                <label for="doctor">Doctor:</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="">Select a doctor</option>
+                    <option value="Dr. John Doe">Dr. John Doe</option>
+                    <option value="Dr. Jane Smith">Dr. Jane Smith</option>
+                </select>
 
-        <label for="reason">Reason for Visit:</label>
-        <textarea id="reason" name="reason" rows="4" required></textarea>
+                <label for="reason">Reason for Visit:</label>
+                <textarea id="reason" name="reason" rows="3" placeholder="Describe the reason" required></textarea>
 
-        <button type="submit">Book Appointment</button>
-    </form>
+                <button type="submit" id="book">Book</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
