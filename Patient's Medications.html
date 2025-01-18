@@ -1,35 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>سكون</title>
-        <link rel="stylesheet" href="style.css">    
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient's Medications</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> 
+    <style>
+        body {
+            background: url('images/bg1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+        }
 
-       <h1>Patient's Medications</h1>
-       <main>
-        <form method="GET" action=''>
-            <label>Patirnt's Name:<input type="text" id="Pname" name="Pname"></label><br>
-            <label>Age:<input type="number" id="PAge" name="PAge"></label>
-            <p>Gender</p>
-            <ul>
-                <li><input type="radio" name="PGender" value="Female">Female</li>
-                <li><input type="radio" name="PGender" value="Male">Male</li>
-            </ul>
+        .logo {
+            display: inline;
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            
+        }
 
-            <p>Medications:</p>
-            <ul>
-                <li><input type="checkbox" name="Medications" value="Aspirin">Aspirin</li>
-                <li><input type="checkbox" name="Medications" value="Zoloft">Zoloft</li>
-                <li><input type="checkbox" name="Medications" value="Cymbalta">Cymbalta</li>
-                <li><input type="checkbox" name="Medications" value="Parnate">Parnate</li>
+        .logo img {
+            height: 90px; /* Adjust as needed */
+        }
 
-            </ul>
+        .back-button {
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #cbd4ae6f;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 10px;
+            position: absolute;
+            top: 90px; /* Positioned below the logo */
+            left: 20px;
+            transition: transform 0.2s ease-in-out;
+        }
 
-            <input type="submit">
-        </form>
-       </main>
-    </body>
+        .back-button:hover {
+            transform: scale(1.1);
+            background-color: #cbd4aeda;
+        }
+
+        .FormTitle {
+            width:100%;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 20%;
+           right:-3%;
+            
+        }
+
+        h1 {
+            color: rgb(244, 239, 239);
+            font-size: 3.5rem;
+            margin: 0;
+            padding-top: 300px;
+            padding-right: 100px;
+            font-weight: 900;
+        }
+
+        .o {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; 
+            align-items: flex-end;
+            min-height: 80vh; 
+            gap: 20px;
+        }
+
+        .t {
+            height: 555px;
+            width: 50%; 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: rgb(244, 239, 239);
+        }
+
+        form {
+            width: 70%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+        }
+
+        input[type="text"], input[type="number"] {
+            border-style: none;
+            background-color: #cbd4ae;
+            border-radius: 10px;
+            height: 25px;
+            padding: 5px;
+            color: #fff;
+        }
+        input[type="number"]{
+            width: 90%;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            position: relative;
+        }
+
+        input[type="radio"]:checked, input[type="checkbox"]:checked {
+            background-color: #728758;
+        }
+        input[type="checkbox"]:checked, input[type="checkbox"]:checked {
+            background-color: #728758;
+        }
+
+        .genderRow {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            font-size: 18px
+        }
+
+        #addButton {
+            padding: 10px 20px;
+            border: none;
+            background-color: #cbd4ae6f;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 40%;
+            margin-left: 29%;
+        }
+
+        #addButton:hover {
+            transform: scale(1.05);
+            background-color: #cbd4aeda;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="images/logohome.png" alt=" SukoonLogo">
+    </div>
+    <a href="index.html" class="back-button">←</a>
+    <div class="FormTitle">
+        <h1>Patient's<br> Medications</h1>  
+    </div>
+    <div class="o">
+        <div class="t">
+            <form method="GET" action=''>
+                <label>Patient's Name
+                    <input type="text" id="Pname" name="Pname">
+                </label>
+                <div style="display: flex; align-items: center; gap: 20px;">
+                    <label style="flex: 1;">Age
+                        <input type="number" id="PAge" name="PAge">
+                    </label>
+                    <div class="genderRow" style="flex: 1;">
+                        <p>Gender:</p>
+                        <label><input type="radio" name="PGender" value="Female"> Female</label>
+                        <label><input type="radio" name="PGender" value="Male"> Male</label>
+                    </div>
+                </div>
+                <div>
+                    <p>Medications:</p>
+                    <ul>
+                        <li><input type="checkbox" name="Medications" value="Aspirin">Aspirin</li>
+                        <li><input type="checkbox" name="Medications" value="Zoloft">Zoloft</li>
+                        <li><input type="checkbox" name="Medications" value="Cymbalta">Cymbalta</li>
+                        <li><input type="checkbox" name="Medications" value="Parnate">Parnate</li>
+                    </ul>
+                </div>
+                <input type="submit" value="Add" id="addButton">
+            </form>
+        </div>
+    </div>
+</body>
 </html>

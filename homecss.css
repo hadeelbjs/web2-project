@@ -36,14 +36,15 @@ body.home {
 
 
 .logo {
-    width: 398px; 
+    width: 200px; 
     margin-bottom: 1rem; 
 }
 
 
 .container .btn {
-  width: 15vw;
-    height: 20vh; 
+    padding-bottom:4px ;
+    width: 15vw;
+    height: 6vh; 
     font-size: large;
     text-decoration: none; 
     color: #ffffff; 
