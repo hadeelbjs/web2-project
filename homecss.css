@@ -44,7 +44,7 @@ body.home {
 .container .btn {
   width: 15vw;
     height: 20vh; 
-    font-size: 1.2vw;
+    font-size: large;
     text-decoration: none; 
     color: #ffffff; 
     background-color: #5a7f55; 
@@ -57,7 +57,7 @@ body.home {
 
 .btn:hover {
     transform: scale(1.05);
-    background-color: rgba(50, 70, 49, 0.8);
+    background-color: #cbd4aeda;
     color: white;
 }
 .container p {
@@ -70,7 +70,7 @@ body.home {
     
 }
 .container p :hover{
-    color:#24543d
+    color:#929c7c
 }
 .container p a {
     text-decoration: none;
