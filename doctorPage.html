@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سكون</title>
+    <style>
+        body {
+            font-family: "Open Sans", serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, rgba(45, 75, 47, 1)),
+                url('WebPorject/vickholius-nugroho-jt6QxZwSOCQ-unsplash.jpg') no-repeat center center fixed;
+            background-size: cover;
+            backdrop-filter: blur(6px);
+        }
+
+        header {
+            background-color: transparent;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            width: 12%;
+            height: 10%;
+        }
+
+        .log-out {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5em;
+        }
+
+        .log-out:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #fff;
+        }
+
+        .info {
+            max-width: 70%;
+            margin: 20px auto;
+            background: #c1cba6;
+            border-radius: 50px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .info div {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        h2 {
+            color: #fff;
+        }
+
+        .main-content {
+            background: linear-gradient(to left, rgba(255, 255, 255, 0.7), rgba(120, 168, 120, 0.4) 50%, rgba(255, 255, 255, 0.7));
+            border-radius: 40px;
+            padding: 4% 5%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 3%;
+            width: 85%;
+            margin: auto;
+        }
+
+        table {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #FAF8F5;
+        }
+
+        table thead th {
+            background-color: #2D4B2F;
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+
+        table tbody td {
+            padding: 15px;
+            text-align: left;
+            background-color: #fdfadf;
+        }
+
+        .confirm-btn {
+            padding: 5px 15px;
+            background-color: #2D4B2F;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+            border: none;
+            cursor: pointer;
+        }
+
+        .confirm-btn:hover {
+            background-color: #3A6540;
+        }
+
+        a {
+            color: #2D4B2F;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="WebPorject/LogoWnameLight.png" alt="Sukoon logo">
+        <a href="#" class="log-out">Log out</a>
+    </header>
+    <main>
+        <h1>Welcome Sarah</h1>
+        <div class="info">
+            <div>
+                <p>First Name: Sarah</p>
+                <p>Last Name: Ahmed</p>
+                <p>ID: 5656</p>
+            </div>
+            <div>
+                <p>Date of birth: 24/7/1999</p>
+                <p>Email: sarah99@gmail.com</p>
+            </div>
+        </div>
+
+        <h2>Upcoming Appointments</h2>
+        <div class="main-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Patient's Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Reason for visit</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>23/2/2025</td>
+                        <td>11 AM</td>
+                        <td>Nora Saad</td>
+                        <td>15</td>
+                        <td>Female</td>
+                        <td>Headache</td>
+                        <td>Confirmed</td>
+                    </tr>
+                    <tr>
+                        <td>16/7/2025</td>
+                        <td>5 PM</td>
+                        <td>Majed Ahmed</td>
+                        <td>45</td>
+                        <td>Male</td>
+                        <td>Back pain</td>
+                        <td>Confirmed</td>
+                    </tr>
+                    <tr>
+                        <td>25/1/2025</td>
+                        <td>9 AM</td>
+                        <td>Hala Omar</td>
+                        <td>30</td>
+                        <td>Female</td>
+                        <td>Check-up</td>
+                        <td><button class="confirm-btn">Confirm</button></td>
+                    </tr>
+                    <tr>
+                        <td>10/2/2025</td>
+                        <td>2 PM</td>
+                        <td>Ali Hassan</td>
+                        <td>55</td>
+                        <td>Male</td>
+                        <td>Chest pain</td>
+                        <td><button class="confirm-btn">Confirm</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Your Patients</h2>
+        <div class="main-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Medications</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Leena Naser</td>
+                        <td>40</td>
+                        <td>Female</td>
+                        <td>Antibiotics</td>
+                        <td><a href="Patient's Medications.html">Prescribe</a></td>
+                    </tr>
+                    <tr>
+                        <td>Majed Saleh</td>
+                        <td>35</td>
+                        <td>Male</td>
+                        <td>N/A</td>
+                        <td><a href="Patient's Medications.html">Prescribe</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
