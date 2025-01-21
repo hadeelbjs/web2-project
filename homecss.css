@@ -19,7 +19,7 @@ body.home {
     -webkit-backdrop-filter: blur(7px);
     border-radius: 20px;
     border: 1px solid rgba(57, 77, 49, 0.18);
-    margin-top: 15vh;
+    margin-top: 5vw;
     height: 66vh; 
     width: 26vw;
     max-width: 370px;

@@ -2,7 +2,7 @@ body {
     background-image: url('images/bg1.jpg');
     backdrop-filter: blur(6px);
     width: 100vw ;
-    height:100vw;
+    height:100vh;
     margin: 0;
     background-size: cover;
     color: white;
@@ -15,9 +15,9 @@ main {
     -webkit-backdrop-filter: blur(7px);
     border-radius: 20px;
     border: 1px solid rgba(57,77,49,0.18);
-    margin-top: 10vw;
+    margin-top: 5vw;
     margin-left: 35vw;
-    height: 32vw;
+    height: 38vw;
     width: 25vw;
 }
 #role-lable {
@@ -37,7 +37,8 @@ section {
     box-sizing: content-box;
 }
 #dob{
-    width: 10.2vw;
+    width: 9.83vw;
+    border: 0;
 }
 #spec {
     box-sizing: content-box;
@@ -57,6 +58,11 @@ section {
     cursor: pointer;
     color: rgba(255, 244, 230, 0.699);
 }
+#input-file:hover{
+    transform: scale(1.05);
+    background-color: #cbd4aeda;
+    color: white;
+}
 .log-button{
     text-align: center;
     display: block;
@@ -67,7 +73,7 @@ section {
     margin-top: 1vw;
     margin-left: 1.4vw;
     border: 0;
-    font-weight: 300;
+    font-weight: 200;
     cursor: pointer;
     background-color: #cbd4ae6f;
     color: white;
@@ -154,21 +160,42 @@ section {
   
   .back-button {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1vw; /* Matches your other font sizes */
     color: #ffffff;
-    background-color: #cbd4ae6f;
-    padding: 10px 20px;
-    border-radius: 20px;
+    background-color: rgba(57, 77, 49, 0.8); /* Matches main background overlay color */
+    padding: 0.8vw 1.5vw; /* Scaled padding for elegance */
+    border-radius: 25px; /* Smooth rounded edges */
     display: inline-block;
-    margin: 20px;
+    margin: 1vw;
     position: absolute; 
-    top: 20px; 
-    left: 20px; 
-    transition: transform 0.2s ease-in-out;
+    top: 1.5vw; 
+    left: 1.5vw; 
+    font-family: "Zain", serif; /* Consistent font style */
+    font-weight: 300;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .back-button:hover {
-    transform: scale(1.1);
-    background-color: #cbd4aeda;
+    transform: translateY(-2px); /* Lift effect */
+    background-color: rgba(57, 77, 49, 1); /* Slightly darker hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
 
+input[type="radio"], input[type="checkbox"] {
+    appearance: none;
+    width: 1.2vw;
+    height: 1.2vw;
+    margin-right: 1vw;
+    border-radius: 20px;
+    background-color: #fefae0;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="radio"]:checked, input[type="checkbox"]:checked {
+    background-color: #728758;
+}
+input[type="checkbox"]:checked, input[type="checkbox"]:checked {
+    background-color: #728758;
 }

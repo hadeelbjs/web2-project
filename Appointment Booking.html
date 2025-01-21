@@ -4,23 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appointment Booking</title>
+    <link rel="icon" href="images/logohome.png" type="image/png">
+
+    <script src="sign-up.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"><style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+       <style>
+          .libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+  
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
             body {
             background: url('images/bg1.jpg') no-repeat center center fixed;
             background-size: cover;
             margin: 0;
             padding: 0;
-            font-family: "Open Sans", serif;
+            font-family: "Zain", "Libre Baskerville","Open Sans", serif;
         }
-
+    
         .logo {
             display: inline;
             position: absolute;
             top: 0.5vw;
             left: 1vw;
+            background-color: rgba(57, 77, 49, 0.16);
+            backdrop-filter: blur(7px);
+            -webkit-backdrop-filter: blur(7px);
+            border-radius: 3vw;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
         }
 
         .logo img {
@@ -41,11 +75,12 @@
 
         h1 {
             color: rgb(244, 239, 239);
-            font-size: 3.5rem;
-            margin: 0;
-            padding-top: 25vw;
-            padding-right: 10vw;
+            font-size: 7vw;
+            padding-top: 14vw;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            padding-right: 20vw;
             font-weight: 900;
+            line-height: 1.1;
         }
 
         .right-section {
@@ -65,6 +100,7 @@
             justify-content: center; 
             align-items: center; 
             padding: 1.8vw;
+            margin-bottom: 0vw;
             background-color: rgba(57,77,49, 0.7);
             backdrop-filter: blur(7px);
             -webkit-backdrop-filter: blur(7px);
@@ -86,13 +122,25 @@
             display: flex;
             flex-direction: column;
             font-size: 1.5vw;
-            margin-bottom: .2vw;
+            margin-bottom: .4vw;
         }
+        .zain-regular {
+    font-family: "Zain", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .zain-bold {
+    font-family: "Zain", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
 
         input[type="date"], input[type="time"], select, textarea {
             border-style: none;
             background-color: rgba(203, 212, 174, 0.8);
             border-radius: 10px;
+            margin-bottom: 2vh;
             padding: .6vw;
             font-size: 1.3vw;
             color: #464444;
@@ -125,6 +173,25 @@
             margin-left: .4vw;
             width: 20%;
         }
+        .libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+  
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
 
         .specialty-wrapper {
             display: flex;
@@ -160,11 +227,11 @@
 </head>
 <body>
     <div class="logo">
-        <img src="images/logohome.png" alt="SukoonLogo">
+       <a href="PatientPage.html"><img src="images/logohome.png" alt="SukoonLogo"></a> 
     </div>
    
     <div class="FormTitle">
-        <h1>Booking<br> An Appointment</h1>  
+        <h1 class="zain-bold">Booking An<br>Appointment</h1>  
     </div>
     <div class="right-section">
         <div class="form-container">
@@ -181,33 +248,35 @@
                     <button type="button" id="next">Add</button>
                 </div>
             </form>
+            
 
 
 
            
             <form>
-                <div class="date-time-wrapper">
-                    <div>
-                        <label for="date">Date:</label>
-                        <input type="date" id="date" name="date" required>
-                    </div>
-                    <div>
-                        <label for="time">Time:</label>
-                        <input type="time" id="time" name="time" required>
-                    </div>
-                </div>
-
                 <label for="doctor">Doctor:</label>
                 <select id="doctor" name="doctor" required>
                     <option value="">Select a doctor</option>
                     <option value="Dr. John Doe">Dr. John Doe</option>
                     <option value="Dr. Jane Smith">Dr. Jane Smith</option>
                 </select>
+                <div class="date-time-wrapper">
+                    <div>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" value="2025-01-19" required>
+                    </div>
+                    <div>
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" value="09:00" required>
+                    </div>
+                </div>
+
+                
 
                 <label for="reason">Reason for Visit:</label>
                 <textarea id="reason" name="reason" rows="3" placeholder="Describe the reason" required></textarea>
 
-                <button type="submit" id="book">Book</button>
+                <button type="submit" id="book" onclick="redirect('PatientPage.html')">Book</button>
             </form>
         </div>
     </div>

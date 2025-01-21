@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient's Medications</title>
+    <script src="sign-up.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logohome.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+
    <style>
+    .logo{
+        background-color: rgba(57, 77, 49, 0.16);
+            backdrop-filter: blur(7px);
+            -webkit-backdrop-filter: blur(7px);
+            border-radius: 3vw;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    }
         body {
             background: url('images/bg1.jpg') no-repeat center center fixed;
             background-size: cover;
             margin: 0;
             padding: 0;
-            font-family: "Open Sans", serif;
+            font-family: "Zain","Libre Baskerville", "Open Sans", serif;
             
         }
 
@@ -29,6 +41,36 @@
         .logo img {
             height: 8vw; 
         }
+        .zain-regular {
+    font-family: "Zain", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .zain-bold {
+    font-family: "Zain", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+        .libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+  
+}
+
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
 
         .FormTitle {
             width:100%;
@@ -43,11 +85,12 @@
 
         h1 {
             color: rgb(244, 239, 239);
-            font-size: 3.5rem;
-            margin: 0;
-            padding-top: 25vw;
-            padding-right: 100vw;
+            font-size: 7vw;
+            padding-top: 14vw;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            padding-right: 20vw;
             font-weight: 900;
+            line-height: 1.1;
         }
 
         .o {
@@ -85,7 +128,7 @@
         label {
             display: flex;
             flex-direction: column;
-            font-size: 1.5vw;
+            font-size: 1.8vw;
         }
 
         input[type="text"], input[type="number"] {
@@ -131,11 +174,11 @@
             grid-template-columns: repeat(2, 1fr);
             gap: .8vw;
         }
-
+       
         li {
             display: flex;
             align-items: center;
-            font-size: 1.5vw;
+            font-size: 1.8vw;
         }
 
         #addButton {
@@ -156,21 +199,21 @@
         }
 
         p {
-            font-size: 1.5vw;
+            font-size: 1.8vw;
         }
     </style>
 </head>
 <body>
     <div class="logo">
-        <img src="images/logohome.png" alt=" SukoonLogo">
+        <a href="doctorPage.html"><img src="images/logohome.png" alt=" SukoonLogo"></a>
     </div>
    
     <div class="FormTitle">
-        <h1>Patient's<br> Medications</h1>  
+        <h1 class="zain-bold">Patient's<br> Medications</h1>  
     </div>
     <div class="o">
         <div class="t">
-            <form method="GET" action=''>
+            <form method="POST" action=''>
                 <label>Patient's Name
                     <input type="text" id="Pname" name="Pname">
                 </label>
@@ -193,7 +236,7 @@
                         <li><input type="checkbox" name="Medications" value="Parnate">Parnate</li>
                     </ul>
                 </div>
-                <input type="submit" value="Add" id="addButton">
+                <input type="button" onclick="redirect('doctorPage.html')" value="Add" id="addButton">
             </form>
         </div>
     </div>

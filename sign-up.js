@@ -20,8 +20,8 @@ function showForm() {
     const role = document.querySelector('input[name="role"][type="radio"]:checked').value;
     
     if (role === 'patient') {
-        window.location.href='PatientHomePage.html';
+        window.location.href='PatientPage.html';
     } else if (role === 'doctor') {
-        window.location.href='doctorHomePage.html';
+        window.location.href='doctorPage.html';
     }
   }

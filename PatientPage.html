@@ -3,31 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sukoon</title>
-    
+    <title>Sukoon Patient</title>
+    <link rel="icon" href="images/logohome.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سكون</title>
     <style>
+       
         body {
-            font-family: "Open Sans", serif;
+            font-family:  "Zain","Libre Baskerville", serif;
             margin: 0;
             padding: 0;
-            background: 
-                linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, rgba(45, 75, 47, 1)),
-                url('WebPorject/vickholius-nugroho-jt6QxZwSOCQ-unsplash.jpg') no-repeat center center fixed;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 1%, rgba(45, 75, 47, 1)),
+                url('images/vickholius-nugroho-jt6QxZwSOCQ-unsplash.jpg') no-repeat center center fixed;
             background-size: cover;
-            backdrop-filter: blur(6px);
         }
 
-        header {
-            background-color: transparent;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    z-index: -3; /* Place behind the content */
+    }
+
+
+    header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to bottom, rgba(71, 117, 75, 0.235), rgba(71, 117, 75, 0.194));
+    padding: 5px 40px;
+    display: flex;
+    gap: 6vw;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 40px 40px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(6px); 
+}
 
         header img {
-            width: 12%;
-            height: 10%;
+            width:auto;
+            height: 7vw;
         }
 
         nav ul {
@@ -35,7 +61,7 @@
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 150px;
+            gap: 4vw;
         }
 
         nav ul li a {
@@ -53,6 +79,7 @@
             text-decoration: none;
             color: #fff;
             font-size: 1.5em;
+            margin-left: auto;
         }
 
         .log-out:hover {
@@ -66,18 +93,20 @@
         }
 
         h1 {
-            font-size: 4em;
+            margin-top: 0;
+            font-size: 6.5vw;
             color: #fff;
         }
 
         .btn {
             display: inline-block;
             padding: 15px 30px;
-            background-color: #2D4B2F;
+            background-color: #47754bcb;
             color: #fff;
             text-decoration: none;
             border-radius: 70px;
             font-size: 1.5em;
+            margin-bottom: 2vw;
         }
 
         .btn:hover {
@@ -94,10 +123,10 @@
             width: 85%;
             margin: auto;
         }
-
+        
         .info {
             max-width: 70%;
-            margin: 20px auto;
+            margin: 3vw auto;
             background: #c1cba6;
             border-radius: 50px;
             padding: 20px;
@@ -107,9 +136,10 @@
         }
 
         .info div {
-            font-size: 1.1em;
+            font-size: 1.4em;
             color: #333;
         }
+
 
         table {
     width: 100%;
@@ -124,12 +154,14 @@
         table thead th {
             background-color: #2D4B2F;
             color: #fff;
+            font-size: 1.9vw;
             padding: 15px;
-            text-align: left;
+            text-align: center;
         }
 
         table tbody td {
-            padding: 15px;
+            padding: 3vw;
+            font-size: 1.8vw;
             text-align: left;
             background-color: #fdfadf;
         }
@@ -153,23 +185,24 @@
         .cancel-btn:hover {
             background-color: #3A6540;
         }
+        
     </style>
 </head>
 <body>
     <header>
-        <img src="WebPorject/LogoWnameLight.png" alt="Sukoon logo">
+        <img src="images/logohome.png" alt="Sukoon logo">
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Appointments</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="PatientPage.html">Home</a></li>
+                <li><a href="#appointment">Appointments</a></li>
+                <!--<li><a href="#">About</a></li>-->
             </ul>
         </nav>
-        <a href="#" class="log-out">Log out</a>
+        <a href="index.html" class="log-out">Log out</a>
     </header>
     <main>
         <h1>Welcome Sarah</h1>
-        <a href="#" class="btn">Book an appointment</a>
+        <a href="Appointment Booking.html" class="btn">Book an appointment</a>
 
         <div class="info">
             <div>
@@ -183,7 +216,7 @@
             </div>
         </div>
 
-        <div class="main-content">
+        <div class="main-content" id="appointment">
             <table>
                 <thead>
                     <tr>
@@ -200,7 +233,7 @@
                         <td>23/12/2025</td>
                         <td>11 AM</td>
                         <td>Sarah Ahmad</td>
-                        <td><img src="WebPorject/images (1).jpeg" alt="Doctor Sarah Ahmad"></td>
+                        <td><img src="images/images (1).jpeg" alt="Doctor Sarah Ahmad"></td>
                         <td>Confirmed</td>
                         <td><a href="#" class="cancel-btn">Cancel</a></td>
                     </tr>
@@ -208,7 +241,7 @@
                         <td>28/12/2025</td>
                         <td>12 PM</td>
                         <td>Ali Ahmad</td>
-                        <td><img src="WebPorject/images.jpeg" alt="Doctor Ali Ahmad"></td>
+                        <td><img src="images/images.jpeg" alt="Doctor Ali Ahmad"></td>
                         <td>Confirmed</td>
                         <td><a href="#" class="cancel-btn">Cancel</a></td>
                     </tr>
