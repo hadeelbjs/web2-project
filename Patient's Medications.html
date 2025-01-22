@@ -15,11 +15,10 @@
 
    <style>
     .logo{
-        background-color: rgba(57, 77, 49, 0.16);
-            backdrop-filter: blur(7px);
+        background-color: rgba(57, 77, 49, 0.01);
+            backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(7px);
-            border-radius: 3vw;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+            border-radius: 300px;
     }
         body {
             background: url('images/bg1.jpg') no-repeat center center fixed;
@@ -53,33 +52,15 @@
     font-style: normal;
   }
 
-        .libre-baskerville-regular {
-  font-family: "Libre Baskerville", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.libre-baskerville-bold {
-  font-family: "Libre Baskerville", serif;
-  font-weight: 700;
-  font-style: normal;
-  
-}
-
-.libre-baskerville-regular-italic {
-  font-family: "Libre Baskerville", serif;
-  font-weight: 400;
-  font-style: italic;
-}
 
         .FormTitle {
-            width:100%;
+            width:100vw;
             text-align: left;
             padding: 0;
             margin: 0;
             position: absolute;
-            top: 20%;
-           right:-3%;
+            top: 20vh;
+           right:-3vw;
             
         }
 
@@ -108,7 +89,7 @@
             display: flex;
             justify-content: center; 
             align-items: center; 
-            padding: 1.8vw;
+            padding: 2vw;
             background-color: rgba(57,77,49, 0.7);
             backdrop-filter: blur(7px);
             -webkit-backdrop-filter: blur(7px);
@@ -122,7 +103,7 @@
             padding: 2vw;
             display: flex;
             flex-direction: column;
-            gap: 1.8vw;
+            gap: 0vw;
         }
 
         label {
@@ -162,9 +143,9 @@
         }
 
         .genderRow {
-            display: flex;
+            
             align-items: center;
-            gap: 1.6vw;
+            gap: 0;
         }
 
         ul {
@@ -184,18 +165,19 @@
         #addButton {
             padding: .8vw 2vw;
             border: none;
-            background-color: #0b0b0bda;
+            background-color: #cbd4ae6f;
             color: #fff;
             border-radius: 10px;
             cursor: pointer;
             font-size: 1.2vw;
             width: 40%;
+            margin-top: 2.3vw;
             margin-left: 29%;
         }
 
         #addButton:hover {
             transform: scale(1.05);
-            background-color: #333331da;
+            background-color: #cbd4aeda;
         }
 
         p {
@@ -217,16 +199,15 @@
                 <label>Patient's Name
                     <input type="text" id="Pname" name="Pname">
                 </label>
-                <div style="display: flex; align-items: center; gap: 20px;">
                     <label style="flex: 1;">Age
                         <input type="number" id="PAge" name="PAge">
-                    </label>
-                    <div class="genderRow" style="flex: 1;">
+                    </label><br>
+                    <div class="genderRow" style="flex: 2;">
                         <p>Gender:</p>
-                        <label><input type="radio" name="PGender" value="Female"> Female</label>
-                        <label><input type="radio" name="PGender" value="Male"> Male</label>
+                        <ul>
+                        <li><input type="radio" name="PGender" value="Female"> Female</li>
+                        <li><input type="radio" name="PGender" value="Male"> Male</li></ul>
                     </div>
-                </div>
                 <div>
                     <p>Medications:</p>
                     <ul>
@@ -236,7 +217,7 @@
                         <li><input type="checkbox" name="Medications" value="Parnate">Parnate</li>
                     </ul>
                 </div>
-                <input type="button" onclick="redirect('doctorPage.html')" value="Add" id="addButton">
+                <input type="button" onclick="redirect('doctorPage.html')" value="Submit" id="addButton">
             </form>
         </div>
     </div>

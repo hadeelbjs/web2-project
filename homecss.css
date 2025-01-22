@@ -54,6 +54,9 @@ body.home {
     text-align: center;
     background-color: #929c7c
 }
+.container .btn a {
+    font-family: "Zain";
+}
 
 
 .btn:hover {
@@ -74,6 +77,7 @@ body.home {
     color:#929c7c
 }
 .container p a {
+    font-family: "Zain";
     text-decoration: none;
     color: white; 
 }
