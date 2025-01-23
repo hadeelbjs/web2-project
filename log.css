@@ -1,3 +1,6 @@
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 body {
     background-image: url('images/bg1.jpg');
     backdrop-filter: blur(6px);
@@ -16,10 +19,11 @@ main {
     border-radius: 20px;
     border: 1px solid rgba(57,77,49,0.18);
     margin-top: 5vw;
-    margin-left: 35vw;
-    height: 38vw;
+    margin-left: 37vw;
+    height: 43vw;
     width: 25vw;
 }
+
 #role-lable {
     font-size: 1.2vw;
 
@@ -33,11 +37,12 @@ section {
     
 }
 #gender{
-    width: 4vw;
+    width: 7.5vw;
+    margin-left: 2.2vw;
     box-sizing: content-box;
 }
 #dob{
-    width: 9.83vw;
+    width: 7.5vw;
     border: 0;
 }
 #spec {
@@ -47,17 +52,21 @@ section {
     display: none;
 }
  span {
-    font-size: 1.2vw;
-    margin-right: 0.8vw;
+    margin-right: 1.5vw;
 }
 #input-file{
     border: 1px solid #ccc;
     display: inline-block;
-    padding: 6px 12px;
-    width: 7vw;
+    padding: 6px 10px;
+    border-radius: 15px;
+    font-size: 1.1vw;
+    text-align: center;
+    width: 14.2vw;
     cursor: pointer;
     color: rgba(255, 244, 230, 0.699);
+    
 }
+
 #input-file:hover{
     transform: scale(1.05);
     background-color: #cbd4aeda;
@@ -69,7 +78,7 @@ section {
     display: block;
     width: 13vw;
     height: 5vh; 
-    font-size: large;
+    font-size: 1.5vw;
     border-radius: 20px;
     margin-top: 1vw;
     margin-left: 1.4vw;
@@ -147,17 +156,7 @@ section {
     font-style: normal;
   }
   
-  .zain-light-italic {
-    font-family: "Zain", serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .zain-regular-italic {
-    font-family: "Zain", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
+
   
   .back-button {
     text-decoration: none;
@@ -187,11 +186,17 @@ input[type="radio"], input[type="checkbox"] {
     appearance: none;
     width: 1.2vw;
     height: 1.2vw;
-    margin-right: 1vw;
+    margin-right: 0.2vw;
     border-radius: 20px;
     background-color: #fefae0;
     cursor: pointer;
     position: relative;
+}
+label {
+    margin-right: 2vw;
+}
+#doctorForm label {
+    margin-right: 0.2vw;
 }
 
 input[type="radio"]:checked, input[type="checkbox"]:checked {
@@ -199,4 +204,11 @@ input[type="radio"]:checked, input[type="checkbox"]:checked {
 }
 input[type="checkbox"]:checked, input[type="checkbox"]:checked {
     background-color: #728758;
+}
+#emailDoctor{
+    width: 9vw;
+}
+ #passwordDoctor {
+    width: 9vw;
+    margin-left: 1.7vw;
 }

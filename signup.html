@@ -5,78 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sukoon Sign-Up</title>
     <link rel="icon" href="images/logohome.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="log.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-
-   
-        <main> 
-            
-            <div class="container">
-              <a href="index.html" class="back-button">
-                ←
-            </a>
-            <h2 class="zain-bold" >Sign-Up</h2>
-    <div class="zain-regular cont">
-            <section>
-                <label id="role-lable" for="role">Select your role:</label><br>
-                <label>
-                    <input type="radio" name="role" value="patient" onchange="showForm()"  /> Patient
-                </label>
-                <label>
-                    <input type="radio"  name="role" value="doctor" onchange="showForm()"/> Doctor
-                </label>
-                
-            </section>
+    <main> 
+        <div class="container">
+            <a href="index.html" class="back-button">←</a>
+            <h2 class="zain-bold">Sign-Up</h2>
+            <div class="zain-regular cont">
+                <section>
+                    <label id="role-label" for="role">Select your role:</label><br>
+                    <label>
+                        <input type="radio" name="role" value="patient" onchange="showForm()" /> Patient
+                    </label>
+                    <label>
+                        <input type="radio" name="role" value="doctor" onchange="showForm()" /> Doctor
+                    </label>
+                </section>
               
-            <!-- Patient Form -->
-            <form id="patientForm" style="display: none;" method="POST">
-                <input type="text" name="firstName" placeholder="First Name" required class="elemnt"><br>
-                 <input type="text" name="lastName" placeholder="Last Name" required class="elemnt"><br>
-                <input type="text" name="id" placeholder="ID" required class="elemnt"><br>
-                <select id="gender" name="gender" required class="elemnt">
-                  <option value="" disabled selected>Gender</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
-                <input id="dob" placeholder="Date Of Birth"
-                class="textbox-n elemnt"
-                type="text"
-                onfocus="(this.type='date')"
-                onblur="(this.type='text')"
-                id="date" ><br>
-                <input type="email" name="email" placeholder="Email Address" required class="elemnt"> <br>
-                 <input type="password" name="password" placeholder="Password" required class="elemnt"><br>
-                <button class="log-button" type="submit" onclick="redirect('PatientPage.html');">Sign Up</button>
-              </form>
+                <!-- Patient Form -->
+                <form id="patientForm" style="display: none;" method="POST">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required class="elemnt"><br>
+                    
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required class="elemnt"><br>
+                    
+                    <label for="id">ID:</label>
+                    <input type="text" id="id" name="id" placeholder="ID" required class="elemnt"><br>
+                    
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required class="elemnt">
+                        <option value="" disabled selected>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select><br>
+                    
+                    <label for="dob">Date Of Birth:</label>
+                    <input id="dob" name="dob" placeholder="Date Of Birth" class="textbox-n elemnt" type="text" 
+                           onfocus="(this.type='date')" onblur="(this.type='text')" required><br>
+                    
+                    <label for="email" >Email Address:</label>
+                    <input type="email"  id="email" name="email" placeholder="Email Address" required class="elemnt"><br>
+                    
+                    <label for="password"  >Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required class="elemnt"><br>
+                    
+                    <button class="log-button" type="submit" onclick="redirect('PatientPage.html');">Sign Up</button>
+                </form>
               
-              <!-- Doctor Form -->
-              <form id="doctorForm" style="display: none;" action="" method="POST">
-               <input type="text" name="firstName" placeholder="First Name" required class="elemnt"><br>
-                <input type="text" name="lastName" placeholder="Last Name" required class="elemnt"><br>
-               <input type="text" name="id" placeholder="ID" required class="elemnt"><br>
-             
-              <span>Profile Picture:</span>
-              <label for="photo" id="input-file" class="elemnt">Choose A Picture</label>
-            <input type="file" id="photo" name="photo" accept="image/*" required>
-            <select id="spec" name="speciality" required class="elemnt">
-              <option value="" disabled selected>Speciality</option>
-              <option value="cardiology">Cardiology</option>
-              <option value="neurology">Neurology</option>
-              <option value="pediatrics">Pediatrics</option>
-            </select><br>
-                <input type="email" name="email" placeholder="Email Address" required class="elemnt"><br>
-                <input type="password" name="password" placeholder="Password" required class="elemnt"><br>
-                <button type="submit" class="log-button" onclick="redirect('doctorPage.html');">Sign Up</button>
-              </form>
-
-     </div>
-    </div>
-	
-    <script src="sign-up.js">window.onload = showForm; </script>
+                <!-- Doctor Form -->
+                <form id="doctorForm" style="display: none;" method="POST">
+                    <label for="firstNameDoctor">First Name:</label>
+                    <input type="text" id="firstNameDoctor" name="firstName" placeholder="First Name" required class="elemnt"><br>
+                    
+                    <label for="lastNameDoctor">Last Name:</label>
+                    <input type="text" id="lastNameDoctor" name="lastName" placeholder="Last Name" required class="elemnt"><br>
+                    
+                    <label for="idDoctor">ID:</label>
+                    <input type="text" id="idDoctor" name="id" placeholder="ID" required class="elemnt"><br>
+                    <span>Profile Picture:</span>
+                    <label for="photo" id="input-file" class="elemnt">Choose A Picture</label>
+                  <input type="file" id="photo" name="photo" accept="image/*" required>
+                    <label for="speciality">Speciality:</label>
+                    <select id="speciality" name="speciality" style="box-sizing: content-box;" required class="elemnt">
+                        <option value="" disabled selected>Speciality</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="pediatrics">Pediatrics</option>
+                    </select><br>
+                    
+                    <label for="emailDoctor">Email Address:</label>
+                    <input type="email" class="email-pass elemnt" id="emailDoctor" name="email" placeholder="Email Address" required ><br>
+                    
+                    <label for="passwordDoctor">Password:</label>
+                    <input type="password" class="email-pass elemnt" id="passwordDoctor" name="password" placeholder="Password" required ><br>
+                    
+                    <button type="submit" class="log-button" onclick="redirect('doctorPage.html');">Sign Up</button>
+                </form>
+            </div>
+        </div>
+        
+        <script src="redirect.js">window.onload = showForm;</script>
+    </main>
 </body>
 </html>
