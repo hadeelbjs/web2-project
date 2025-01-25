@@ -293,5 +293,34 @@
             </table>
         </div>
     </main>
+    <script>
+        /* Sort the first table*/
+        const table = document.querySelector('table');
+        const rows = Array.from(table.querySelectorAll('tbody tr'));
+
+        rows.sort((row1, row2) => {
+            const date1 = new Date(row1.cells[0].textContent.trim().split('/').reverse().join('/'));
+            const date2 = new Date(row2.cells[0].textContent.trim().split('/').reverse().join('/'));
+            return date1 - date2;
+        });
+
+        const tableBody = table.querySelector('tbody');
+        tableBody.innerHTML ="";
+        rows.forEach (row => tableBody.appendChild(row));
+
+        /* Sort the second table*/
+        const table2 = document.querySelectorAll('table')[1];
+        const rows2 = Array.from(table2.querySelectorAll('tbody tr'));
+
+        rows2.sort((row1, row2) => {
+            const name1 = row1.cells[0].textContent.trim();
+            const name2 = row2.cells[0].textContent.trim();
+            return name1.localeCompare(name2);
+        });
+
+        const tableBody2 = table2.querySelector('tbody');
+        tableBody2.innerHTML ="";
+        rows2.forEach (row => tableBody2.appendChild(row));
+   </script>
 </body>
 </html>
